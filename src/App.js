@@ -11,11 +11,12 @@ const App = () => {
   useEffect(()=>{
     axios.get(databaseurl).then(res=>{
       setdata(res.data)
+    
            }).catch(err => console.log(err))
           }
 ,[])
 
-    
+
   
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
@@ -24,7 +25,8 @@ const App = () => {
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
         const characterElements = data.map(x=>{
-          return <Character name={x.name} />
+          console.log(x)
+          return <Character data={x} />
         })  
 
         
