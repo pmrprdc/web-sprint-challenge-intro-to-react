@@ -17,15 +17,15 @@ height 100px;
 color: yellow;
 background-color: black;
 margin: 0 auto;
-
 `
+
 
 
 export default function Character(props){
     const data = props.data;
     return (
     <Wrapper>
-    <Button>{data.name}</Button>
+        <h1>{data.name}</h1>
     </Wrapper>
     
     )
